@@ -10,7 +10,7 @@ start-local-database:
 			-e POSTGRES_PASSWORD=1234 \
 			-e POSTGRES_DB=$(DATABASE_NAME) \
 			postgres:15 \
-			>/dev/null
+			>NUL 2>NUL
 	$(info Database $(DATABASE_NAME) started on port :5432)
 
 stop-local-database:
